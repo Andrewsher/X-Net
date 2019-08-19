@@ -1,6 +1,6 @@
 # X-Net
 
-X-Net: Brain Stroke Lesion Segmentation Based on Depthwise Separable Convolution and Long-range Dependencies (MICCAI 2019)
+[X-Net: Brain Stroke Lesion Segmentation Based on Depthwise Separable Convolution and Long-range Dependencies (MICCAI 2019)](https://arxiv.org/abs/1907.07000)
 
 ## Some issues to know
 
