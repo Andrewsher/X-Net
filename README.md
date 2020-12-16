@@ -26,6 +26,7 @@ Kehan Qi, Hao Yang, Cheng Li, Zaiyi Liu, Meiyun Wang, Qiegen Liu, and Shanshan W
 
 # 输入与输出
 |名称|说明|
+|-----|-----|
 |输入|单通道灰度图，值域为0-1，大小为224x192。|
 |输出|标签。0表示背景，1表示病变|
 
