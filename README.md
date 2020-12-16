@@ -7,6 +7,7 @@ Kehan Qi, Hao Yang, Cheng Li, Zaiyi Liu, Meiyun Wang, Qiegen Liu, and Shanshan W
 采用X-Net实现对ATLAS数据集的图像分割
 ## 2. 性能
 |Dice|IoU|Precision|Recall|Number of Parameters|
+|-----|-----|-----|-----|-----|
 |0.4867|0.3723|0.6000|0.4752|15.1M|
 ## 3. 使用数据集
 包括数据集名称、来源。如果不使用数据集，则留空。
