@@ -25,6 +25,9 @@ def get_score_for_one_patient(labels, predicts, threshold=0.5):
     iou_score = TP_count / (lp_count + pp_count - TP_count) if lp_count + pp_count - TP_count != 0 else 0
     precision = TP_count / (TP_count + FP_count) if FP_count + TP_count != 0 else 0
     recall = TP_count / (TP_count + FN_count) if TP_count + FN_count != 0 else 0
+    f1_score = 2 * TP_count / (2 * TP_count + FN_count + FP_count) if 2 * TP_count + FN_count + FP_count != 0 else 0
+    voe = 2 * (pp_count - lp_count) / (pp_count + lp_count) if pp_count + lp_count != 0 else 0
+    rvd = pp_count / lp_count - 1 if lp_count != 0 else -1
 
     print('Label positive:', lp_count,
           '\t Predict positive:', pp_count,
@@ -34,8 +37,11 @@ def get_score_for_one_patient(labels, predicts, threshold=0.5):
           '\t Dice score:', dice_score,
           '\t IOU score:', iou_score,
           '\t Precision:', precision,
-          '\t Recall:', recall)
-    return dice_score, iou_score, precision, recall
+          '\t Recall:', recall,
+          '\t F1 score:', f1_score,
+          '\t VOE score:', voe,
+          '\t RVD score:', rvd)
+    return dice_score, iou_score, precision, recall, f1_score, voe, rvd
 
 
 def get_score_from_all_slices(labels, predicts, threshold=0.5):
